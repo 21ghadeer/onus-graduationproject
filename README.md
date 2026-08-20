@@ -1,16 +1,63 @@
-# onus
+# ONUS
 
-A new Flutter project.
+ONUS هو تطبيق موبايل مبني بـ Flutter يهدف إلى تبسيط وتسهيل عملية استئجار معدات البناء ومواد التشييد، من خلال ربط مقدمي الخدمة بالعملاء عبر منصة رقمية موحدة.
 
-## Getting Started
+## نبذة عن المشروع
 
-This project is a starting point for a Flutter application.
+يوفر التطبيق نظام حجز متكامل يتيح للمستخدمين تصفح المعدات والمواد المتاحة، حجزها، ومتابعة حالة طلباتهم، مع لوحة إدارة تسمح بمتابعة الحجوزات والإحصائيات. صُمم المشروع كمشروع تخرج يغطي تصميم النظام، نمذجة قاعدة البيانات، وتحسين تجربة المستخدم من البداية للنهاية.
 
-A few resources to get you started if this is your first Flutter project:
+## المميزات الرئيسية
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- تصفح فئات متعددة من معدات ومواد البناء (كهرباء، سباكة، نجارة، دهانات، معدات ثقيلة...)
+- نظام حجز وإدارة طلبات العملاء
+- لوحة تحكم لإدارة جميع الحجوزات وعرض الإحصائيات
+- نظام مصادقة وتسجيل دخول آمن عبر Firebase
+- عرض صور وفيديوهات توضيحية للمعدات
+- دعم متعدد المنصات (Android, iOS, Web, Windows, macOS, Linux)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## التقنيات المستخدمة
+
+- Flutter – لبناء واجهة المستخدم متعددة المنصات
+- Firebase – للمصادقة (Authentication) وقاعدة البيانات السحابية (Cloud Firestore)
+- Dart – لغة البرمجة الأساسية
+
+## متطلبات التشغيل
+
+قبل تشغيل المشروع، تأكد من توفر:
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) (إصدار 3.6.1 فأعلى)
+- حساب [Firebase](https://firebase.google.com/) مفعّل
+
+## خطوات التثبيت والتشغيل
+
+1. استنساخ المستودع (Clone)
+     git clone https://github.com/21ghadeer/onus-graduationproject.git
+   cd onus-graduationproject
+   
+2. تثبيت الحزم المطلوبة
+     flutter pub get
+   
+3. إعداد Firebase
+   - أنشئ مشروع جديد على [Firebase Console](https://console.firebase.google.com/)
+   - أضف تطبيقات Android وiOS للمشروع
+   - نزّل ملفات الإعداد (`google-services.json` لأندرويد و`GoogleService-Info.plist` لـ iOS) وضعها في المسارات المناسبة
+   - فعّل خدمتي Authentication و**Firestore** من لوحة Firebase
+
+4. تشغيل التطبيق
+     flutter run
+   
+## هيكلة المشروع
+onus-graduationproject/
+├── lib/            # الكود المصدري الرئيسي للتطبيق
+├── assets/         # الصور والموارد المرئية
+├── android/        # إعدادات وملفات منصة أندرويد
+├── ios/            # إعدادات وملفات منصة iOS
+├── web/            # إعدادات نسخة الويب
+├── windows/        # إعدادات نسخة ويندوز
+├── macos/          # إعدادات نسخة ماك
+├── linux/          # إعدادات نسخة لينكس
+├── test/           # اختبارات المشروع
+└── pubspec.yaml    # قائمة الحزم والاعتماديات
+
+## المساهمة
+
+هذا المشروع جزء من مشروع تخرج أكاديمي
